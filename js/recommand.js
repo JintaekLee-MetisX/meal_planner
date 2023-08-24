@@ -17,11 +17,11 @@ function getRestaurantList(){
   readJSON("./restaurant_list.json", function(text){
     const data = JSON.parse(text);
     restaurants = data["restaurant"];
-    recommendRestaurant(restaurants)
+    recommendRestaurant()
   });
 }
 
-function recommendRestaurant(restaurants) {
+function recommendRestaurant() {
   const firstRestaurant = _.sample(restaurants);
   const recommentdation = document.querySelector('#recommendation')
 
