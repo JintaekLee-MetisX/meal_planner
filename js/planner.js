@@ -11,7 +11,6 @@ function onMenuButtonClick(event) {
   event.preventDefault();
   firstCard.classList.add(HIDDEN_CLASS_NAME);
   secondCard.classList.remove(HIDDEN_CLASS_NAME);
-  secondGreeting.innerText = `안녕하세요!`;
   getRestaurantList();
 }
 

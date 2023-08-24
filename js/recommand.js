@@ -22,18 +22,23 @@ function getRestaurantList(){
 }
 
 function recommendRestaurant() {
-  const firstRestaurant = _.sample(restaurants);
+  do
+  {
+    firstRestaurant = _.sample(restaurants);
+  } while (document.getElementById('noSalad').checked && firstRestaurant.category == "Salad");
+
   const recommentdation = document.querySelector('#recommendation')
 
   do {
     secondRestaurnat = _.sample(restaurants);
-  } while (firstRestaurant.name == secondRestaurnat.name
+  } while ((document.getElementById('noSalad').checked && firstRestaurant.category == "Salad")
+        || firstRestaurant.name == secondRestaurnat.name
         || firstRestaurant.category == secondRestaurnat.category
         || firstRestaurant.type == secondRestaurnat.type
         || secondRestaurnat.lunch_only == "true"
         || secondRestaurnat.budget == "over");
 
-  recommentdation.innerText = `점심 : ${firstRestaurant.name},\n 저녁 : ${secondRestaurnat.name}\n어떠신가요?`
+  recommentdation.innerText = `점심 : ${firstRestaurant.name}\n 저녁 : ${secondRestaurnat.name}`
 }
 
 reRecommendationBtn.addEventListener('click', recommendRestaurant)
