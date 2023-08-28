@@ -5,7 +5,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "localhost에 대해 Chrome 시작",
-            "url": "http://127.0.0.1:3000/index.html",
+            "url": "http://127.0.0.1:5500/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

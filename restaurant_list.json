@@ -109,22 +109,26 @@
 			"name":"전주장작불곰탕",
       "category":"Korean",
       "budget":"over",
+      "outside":"true",
       "payco":"true"
     },
     {
 			"name":"샐러디",
       "category":"Salad",
+      "outside":"true",
       "payco":"true"
     },
     {
 			"name":"레드웍",
       "category":"Chinese",
+      "outside":"true",
       "payco":"true"
     },
     {
 			"name":"버거킹",
       "category":"Western",
       "type":"Bread",
+      "outside":"true",
       "payco":"true"
     },
     {

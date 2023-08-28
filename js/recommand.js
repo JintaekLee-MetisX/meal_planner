@@ -21,23 +21,38 @@ function getRestaurantList(){
   });
 }
 
+function checkSkipCondition(restaurant){
+  skip = false;
+
+  skipSalad = document.getElementById('noSalad').checked;
+  noOutside = document.getElementById('noOutside').checked;
+
+  if ((skipSalad && restaurant.category == "Salad")
+    || (noOutside && restaurant.outside == "true"))
+  {
+    skip = true;
+  }
+
+  return skip;
+}
+
 function recommendRestaurant() {
   do
   {
     firstRestaurant = _.sample(restaurants);
-  } while (document.getElementById('noSalad').checked && firstRestaurant.category == "Salad");
+  } while (checkSkipCondition(firstRestaurant));
 
-  const recommentdation = document.querySelector('#recommendation')
+  withCard = document.getElementById('withCard').checked;
 
   do {
     secondRestaurnat = _.sample(restaurants);
-  } while ((document.getElementById('noSalad').checked && firstRestaurant.category == "Salad")
-        || firstRestaurant.name == secondRestaurnat.name
+  } while (checkSkipCondition(secondRestaurnat)
         || firstRestaurant.category == secondRestaurnat.category
         || firstRestaurant.type == secondRestaurnat.type
         || secondRestaurnat.lunch_only == "true"
-        || secondRestaurnat.budget == "over");
+        || (withCard == false && secondRestaurnat.budget == "over"));
 
+  const recommentdation = document.querySelector('#recommendation')
   recommentdation.innerText = `점심 : ${firstRestaurant.name}\n 저녁 : ${secondRestaurnat.name}`
 }
 
