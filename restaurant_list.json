@@ -136,6 +136,19 @@
       "category":"Western",
       "type":"Bread",
       "payco":"true"
+    },
+    {
+			"name":"본설렁탕",
+      "category":"Korean",
+      "type":"soup",
+      "budget":"over",
+      "payco":"true"
+    },
+    {
+			"name":"더식탁",
+      "category":"Korean",
+      "lunch_only":"true",
+      "payco":"false"
     }
   ]
 }
