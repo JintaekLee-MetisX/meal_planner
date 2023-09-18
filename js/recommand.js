@@ -28,8 +28,9 @@ function checkSkipCondition(restaurant){
   noOutside = document.getElementById('noOutside').checked;
 
   if ((skipSalad && restaurant.category == "Salad")
-    || (noOutside && restaurant.outside == "true"))
-  {
+    || (noOutside && restaurant.outside == "true")
+    || (withCard == false && restaurant.payco == "false"))
+    {
     skip = true;
   }
 
