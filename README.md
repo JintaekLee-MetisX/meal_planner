@@ -1,4 +1,4 @@
-https://jintaeklee-metisx.github.io/meal_planner/
+https://jintaek-metisx.github.io/meal_planner/
 
 ### 점심 / 저녁 식당 추천
 
@@ -11,10 +11,10 @@ https://jintaeklee-metisx.github.io/meal_planner/
 
 ## 기능
 * 샐러드 제외
+* 단지 내부
+  - 우천시 단지 내 식당 중에서 선택
+* 카드 사용(페이코 미사용)
+  - 식대 초과되는 식당, 페이코 미지원 식당 이용 가능
 
 ## Todo
-
-* 페이코 미사용
-  - 체크 박스 추가
-  - 식대 초과되는 식당, 페이코 미지원 식당 이용 가능
 
